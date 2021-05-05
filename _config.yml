@@ -3,7 +3,7 @@ title_left    : "personal blog"
 title_right   : "" # default: ""
 description   : "Hanya personal blog, sesekali posting."
 keywords      : "Fathul Muiin, minimalism, web developer."
-url           : https://fmuiin.xyz # site url
+# url           : https://fmuiin.xyz # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "" # image uri like logo/cover image for site seo
 
