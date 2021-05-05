@@ -1,0 +1,17 @@
+Jekyll
+
+RubyInstaller, install
+cek 
+	gem -v
+c, mkdir projects
+in projects, gem install bundler jekyll
+jekyll new webapp
+cd webapp
+bundle exec jekyll serve
+
+Pas error,
+	gem update --system
+	bundle update --bundler
+	gem install bundler:1.16.1
+	bundle install
+	bundle exec jekyll serve
