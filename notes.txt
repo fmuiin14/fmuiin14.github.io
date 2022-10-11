@@ -1,0 +1,2 @@
+Make a new content:
+hugo new posts/name.md
