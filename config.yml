@@ -4,6 +4,8 @@ title: Fathul Muiin Journey
 theme: PaperMod
 
 params:
+  assets:
+    disableFingerprinting: true
   homeInfoParams:
     Title: "Hello Stranger"
     Content: "welcome to my blog. You can find my portofolio and my posts here."
