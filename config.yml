@@ -1,6 +1,6 @@
 baseURL: "https://fmuiin14.github.io/"
 languageCode: en-us
-title: Fathul Muiin Journey
+title: FathulMuiin
 theme: PaperMod
 
 outputs:
@@ -14,15 +14,23 @@ params:
   assets:
     disableFingerprinting: true
   homeInfoParams:
-    Title: "Hello Stranger"
-    Content: "welcome to my blog. You can find my portofolio and my posts here."
+    Title: "Hello 👋 I'm Fathul."
+    Content: "Welcome to my blog. You can find my portofolio and my posts here. I'm a Backend Engineer based in West Java, Indonesia. You can me reach at 👇👇👇"
   socialIcons:
     - name: facebook
-      url: "https:facebook.com/"
+      url: "https://www.facebook.com/fmuiin/"
     - name: twitter
-      url: "https:twitter.com/"
+      url: "https://twitter.com/rukawa_san"
+    - name: instagram
+      url: "https://instagram.com/fmuiin"
+    - name: linkedin
+      url: "https://linkedin.com/in/fmuiin14"
+    - name: medium
+      url: "https://medium.com/@fmuiin14"
+    - name: stackoverflow
+      url: "https://stackoverflow.com/users/10955266/fathul-muiin"
     - name: github
-      url: "https:github.com/"
+      url: "https://github.com/fmuiin14"
       
   cover:
     linkFullImages: true
@@ -30,9 +38,14 @@ params:
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
+  # enableEmoji: true
 
 menu:
   main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 5
     - identifier: categories
       name: Categories
       url: /categories/
@@ -45,11 +58,11 @@ menu:
       name: Archives
       url: /archives/
       weight: 30
-    - identifier: about
-      name: About
-      url: /about/
-      weight: 40
     - identifier: search
       name: Search
       url: /search/
+      weight: 40
+    - identifier: about
+      name: About
+      url: /about/
       weight: 50
