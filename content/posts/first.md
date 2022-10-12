@@ -2,10 +2,13 @@
 title: "First"
 date: 2022-10-11T16:52:26+07:00
 draft: false
-# cover:
-#     image: img/1.png
-#     alt: 'This is a post image'
-#     caption: 'This is the caption'
+cover:
+    image: img/1.png
+    alt: 'This is a post image'
+    caption: 'This is the caption'
+    # linkFullImages: true
+    # responsiveImages: false
+    # relative: false
 tags: ["html", "css"]
 categories: ["tech"]
 ---

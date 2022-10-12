@@ -3,7 +3,13 @@ languageCode: en-us
 title: Fathul Muiin Journey
 theme: PaperMod
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
 params:
+  defaultTheme: auto # to switch between dark or light according to browser theme
   assets:
     disableFingerprinting: true
   homeInfoParams:
@@ -26,12 +32,8 @@ params:
 
 menu:
   main:
-    - identifier: home
-      name: Home
-      url: /
-      weight: 5
     - identifier: categories
-      name: Categoriesss
+      name: Categories
       url: /categories/
       weight: 10
     - identifier: tags
@@ -46,3 +48,7 @@ menu:
       name: About
       url: /about/
       weight: 40
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 50
