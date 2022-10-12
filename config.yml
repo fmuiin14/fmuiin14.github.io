@@ -31,7 +31,7 @@ menu:
       url: /
       weight: 5
     - identifier: categories
-      name: Categories
+      name: Categoriesss
       url: /categories/
       weight: 10
     - identifier: tags
