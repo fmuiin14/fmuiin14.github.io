@@ -14,19 +14,10 @@
     <loc>https://fmuiin14.github.io/categories/</loc>
     <lastmod>2022-10-11T16:52:26+07:00</lastmod>
   </url><url>
-    <loc>https://fmuiin14.github.io/tags/css/</loc>
-    <lastmod>2022-10-11T16:52:26+07:00</lastmod>
-  </url><url>
     <loc>https://fmuiin14.github.io/posts/first/</loc>
     <lastmod>2022-10-11T16:52:26+07:00</lastmod>
   </url><url>
-    <loc>https://fmuiin14.github.io/tags/html/</loc>
-    <lastmod>2022-10-11T16:52:26+07:00</lastmod>
-  </url><url>
-    <loc>https://fmuiin14.github.io/tags/</loc>
-    <lastmod>2022-10-11T16:52:26+07:00</lastmod>
-  </url><url>
-    <loc>https://fmuiin14.github.io/categories/tech/</loc>
+    <loc>https://fmuiin14.github.io/categories/other/</loc>
     <lastmod>2022-10-11T16:52:26+07:00</lastmod>
   </url><url>
     <loc>https://fmuiin14.github.io/about/</loc>
@@ -34,5 +25,7 @@
     <loc>https://fmuiin14.github.io/archives/</loc>
   </url><url>
     <loc>https://fmuiin14.github.io/search/</loc>
+  </url><url>
+    <loc>https://fmuiin14.github.io/tags/</loc>
   </url>
 </urlset>
