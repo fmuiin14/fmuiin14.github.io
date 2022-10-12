@@ -43,7 +43,13 @@ Enhance feature
 ### Merry Riana Shop
 Build marketplace using Codeigniter 3
 ## 2020
+### Larashop
+Marketplace using laravel
+### Tripmuuu
+Search travelling place
+## 2019
 ### Sandeza
 Enhance feature
+## 2018
 ### Monggofest
 Build website for investment

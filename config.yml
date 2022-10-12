@@ -15,7 +15,7 @@ params:
     disableFingerprinting: true
   homeInfoParams:
     Title: "Hello 👋 I'm Fathul."
-    Content: "Welcome to my blog. You can find my portofolio and my posts here. I'm a Backend Engineer based in West Java, Indonesia. You can reach me at 👇👇👇"
+    Content: "Welcome to my blog. You can find my portofolio and my posts here. I'm a Backend Engineer based in West Java, Indonesia. You can reach me at 👇👇👇 ---> or check About Me on menu section."
   socialIcons:
     - name: facebook
       url: "https://www.facebook.com/fmuiin/"
@@ -34,7 +34,7 @@ params:
       
   cover:
     linkFullImages: true
-  ShowBreadCrumbs: true
+  # ShowBreadCrumbs: true
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
@@ -43,7 +43,7 @@ params:
 menu:
   main:
     - identifier: about
-      name: About
+      name: About Me
       url: /about/
       weight: 10
     - identifier: posts
