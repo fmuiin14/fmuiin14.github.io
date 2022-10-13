@@ -36,20 +36,41 @@ Website for asuransi
 Website for asuransi
 ### Kita MediCare
 Website for reservation Covid 19 test
-### Credit Cover
-Improve CMS of Bank Riau Kepri
+### SC Plus
+- It is a platform intended to support the insurance and credit guarantee business, between Financial Institutions, Brokers, and Insurance.
+  - Teck Stack: Codeigniter 3
+  - My Role: Backend Developer
+  - URL: [https://scplus.id/](https://scplus.id/)
 ### LSP (Lembaga Sertifikasi Profesi)
-Enhance feature
-### Merry Riana Shop
-Build marketplace using Codeigniter 3
+- The Sharia Insurance Professional Certification Agency (LSP) is the only licensed support institution for the Badan Nasional Sertifikasi Porfesi (BNSP) which is responsible for implementing competency certification in the sharia insurance sector.
+  - Tech Stack: Codeigniter 3 with blade for view
+  - My Role: Enhance feature, Backend Developer
+  - URL: [https://ahli.lsp-ps.id/id](https://ahli.lsp-ps.id/id)
 ## 2020
 ### Larashop
-Marketplace using laravel
+- Build Marketplace, learn from buildWithAngga.
+  - Tech Stack: Laravel
+  - My Role: Backend Developer
+  - URL: [https://github.com/fmuiin14/bwastore-laravel](https://github.com/fmuiin14/bwastore-laravel)
 ### Tripmuuu
-Search travelling place
+- Platform for people to search a quality travelling place.
+  - Tech Stack: Laravel
+  - My Role : Backend Developer
+  - URL: Still searching this project
 ## 2019
+### Merry Riana Shop
+- Build marketplace for Merry Riana Group, contains merchandise, event, and course.
+  - Tech Stack: Codeigniter 3, MySQL, Bootstrap.
+  - My Role: Integrate view from codeigniter controller.
+  - URL: [https://merryrianashop.com/](https://merryrianashop.com/).
 ### Sandeza
-Enhance feature
+- Sandeza combines several digital communication channels in one integrated platform that is very easy to use to convey any information (whatsapp, telegram, sms, email, line, fb messenger).
+  - Tech Stack: Javascript, Bootstrap, jQuery, AJAX.
+  - My Role: JavaScript to build CRUD.
+  - URL: [https://sandeza.id/](https://sandeza.id/).
 ## 2018
 ### Monggofest
-Build website for investment
+- Team project, platform that provides opportunities for user to invest and work together so as to produce a symbiosis of mutualism.
+  - Tech Stack: Ruby on Rails, ReactJS.
+  - My Role: ReactJS to make chart and registration.
+  - URL: [http://monggovest-staging.herokuapp.com/](http://monggovest-staging.herokuapp.com/).
