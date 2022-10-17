@@ -4,7 +4,7 @@ layout: "about"
 url: "/about/"
 ---
 
-Hi, Fathul Muiin here. I'm a backend engineer from West Java, Indonesia. Become coder since 2020.
+Hi, Fathul Muiin here. I'm a backend engineer from West Java, Indonesia. Become coder since 2020. You can see my projects & portofolio below. 
 # Areas Of Knowledge
     - Programming Language: 
       - PHP
@@ -22,13 +22,25 @@ Hi, Fathul Muiin here. I'm a backend engineer from West Java, Indonesia. Become 
 # Projects I've ever handle
 ## 2022
 ### Hi Lite Sindonews
-Enhance feature
+- Hi-Lite SINDOnews is a lighter version of the news portal for Smartphones with a more efficient internet quota, so that it can be accessed and displayed content faster.
+  - Tech Stack: Codeigniter 3, Redis.
+  - My Role: Backend Developer | Enhance feature, add new page, custom display & logic request from users.
+  - URL: [https://www.sportstars.id/](https://www.sportstars.id/).
 ### Celebrities (https://www.celebrities.id/)
-Enhance feature & maintenance website
+- Celebrities.id is an inspiring and educative portal with a mission to present complete, exclusive and attractive news and online features (multimedia base), and inspire.
+  - Tech Stack: Codeigniter 3, API from NodeJS.
+  - My Role: Backend Developer | Enhance feature, add new page, custom display & logic request from users.
+  - URL: [https://www.sportstars.id/](https://www.sportstars.id/).
 ### Sportstars (https://sportstars.id/)
-Enhance feature & maintenance website
+- Sportstars.id is a sports portal that presents a variety of information from various sports at home and abroad with informative, interesting, accurate, in-depth writing that can be a reference for readers.
+  - Tech Stack: Codeigniter 3, API from NodeJS.
+  - My Role: Backend Developer | Enhance feature, add new page, custom display & logic request from users.
+  - URL: [https://www.sportstars.id/](https://www.sportstars.id/).
 ### Highend Magazine (https://highend-magazine.okezone.com/)
-Enhance feature & maintenance website
+- HighEnd Magazine is Indonesia's first exclusive fashion and lifestyle magazine that is committed to presenting the best fashion, travel, celebrity and lifestyle news for readers.
+  - Tech Stack: Codeigniter 3, API from NodeJS.
+  - My Role: Backend Developer | Revamp all displaying pages.
+  - URL: [https://highend-magazine.okezone.com/](https://highend-magazine.okezone.com/).
 ## 2021
 ### Health Core Nasionalre
 - Platform to process insurance start from registration, requirement, untill payment. This website using several role like underwritting and admin.
@@ -70,7 +82,7 @@ Enhance feature & maintenance website
 ### Sandeza
 - Sandeza combines several digital communication channels in one integrated platform that is very easy to use to convey any information (whatsapp, telegram, sms, email, line, fb messenger).
   - Tech Stack: Javascript, Bootstrap, jQuery, AJAX.
-  - My Role: Frontend Developer - Bootstrap, JavaScript, AJAX, jQuery to build CRUD.
+  - My Role: Frontend Developer | Bootstrap, JavaScript, AJAX, jQuery to build CRUD.
   - URL: [https://sandeza.id/](https://sandeza.id/).
 ## 2018
 ### Monggofest
