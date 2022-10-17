@@ -67,7 +67,7 @@ Hi, Fathul Muiin here. I'm a backend engineer from West Java, Indonesia. Become 
 - The Sharia Insurance Professional Certification Agency (LSP) is the only licensed support institution for the Badan Nasional Sertifikasi Porfesi (BNSP) which is responsible for implementing competency certification in the sharia insurance sector.
   - Tech Stack: Codeigniter 3 with blade for view.
   - My Role: Backend Developer | Enhance feature, make administration form more detail.
-  - URL: [https://ahli.lsp-ps.id/id](https://ahli.lsp-ps.id/id).
+  - URL: [https://lsp-ps.id/](https://lsp-ps.id/).
 
 ### LetsCode
 - Platform to learn code for kids.
