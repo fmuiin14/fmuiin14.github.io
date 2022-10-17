@@ -25,18 +25,18 @@ Hi, Fathul Muiin here. I'm a backend engineer from West Java, Indonesia. Become 
 - Hi-Lite SINDOnews is a lighter version of the news portal for Smartphones with a more efficient internet quota, so that it can be accessed and displayed content faster.
   - Tech Stack: Codeigniter 3, Redis.
   - My Role: Backend Developer | Enhance feature, add new page, custom display & logic request from users.
-  - URL: [https://www.sportstars.id/](https://www.sportstars.id/).
-### Celebrities (https://www.celebrities.id/)
+  - URL: [https://hi-lite.sindonews.com/](https://hi-lite.sindonews.com/).
+### Celebrities
 - Celebrities.id is an inspiring and educative portal with a mission to present complete, exclusive and attractive news and online features (multimedia base), and inspire.
   - Tech Stack: Codeigniter 3, API from NodeJS.
   - My Role: Backend Developer | Enhance feature, add new page, custom display & logic request from users.
-  - URL: [https://www.sportstars.id/](https://www.sportstars.id/).
-### Sportstars (https://sportstars.id/)
+  - URL: [https://www.celebrities.id/](https://www.celebrities.id/).
+### Sportstars
 - Sportstars.id is a sports portal that presents a variety of information from various sports at home and abroad with informative, interesting, accurate, in-depth writing that can be a reference for readers.
   - Tech Stack: Codeigniter 3, API from NodeJS.
   - My Role: Backend Developer | Enhance feature, add new page, custom display & logic request from users.
   - URL: [https://www.sportstars.id/](https://www.sportstars.id/).
-### Highend Magazine (https://highend-magazine.okezone.com/)
+### Highend Magazine
 - HighEnd Magazine is Indonesia's first exclusive fashion and lifestyle magazine that is committed to presenting the best fashion, travel, celebrity and lifestyle news for readers.
   - Tech Stack: Codeigniter 3, API from NodeJS.
   - My Role: Backend Developer | Revamp all displaying pages.
