@@ -42,11 +42,17 @@ Hi, Fathul Muiin here. I'm a backend engineer from West Java, Indonesia. Become 
   - My Role: Backend Developer | Revamp all displaying pages.
   - URL: [https://highend-magazine.okezone.com/](https://highend-magazine.okezone.com/).
 ## 2021
-### Health Core Nasionalre
+### Health Core Nasionalre -> current
 - Platform to process insurance start from registration, requirement, untill payment. This website using several role like underwritting and admin.
   - Tech Stack: Laravel.
   - My Role: Fullstack Developer | Build modul life, health, prodev depend requirement from client.
   - URL: [https://git.core.nasionalre.id/rafdhi_hm/health-core.git](https://git.core.nasionalre.id/rafdhi_hm/health-core.git).
+
+### DPD Portal -> current
+- Web Portal for DPD DKI Jakarta.
+  - Tech Stack: Golang.
+  - My Role: Fullstack Developer | Enhance feature based on user request. Some feature I've done were rekap catatan and generate pdf, CRUD Catatan Tugas Harian & Approval, and Form KP 4 Tunjangan.
+  - URL: [https://okk.dpd.go.id/](https://okk.dpd.go.id/).
 ### Infinance
 - Platform to learn about financial education. You can learn & teach people about financial education, and you can have referral code for you to invite people.
   - Tech Stack: Laravel, VueJS, AXIOS.
@@ -62,6 +68,12 @@ Hi, Fathul Muiin here. I'm a backend engineer from West Java, Indonesia. Become 
   - Tech Stack: Codeigniter 3 with blade for view.
   - My Role: Backend Developer | Enhance feature, make administration form more detail.
   - URL: [https://ahli.lsp-ps.id/id](https://ahli.lsp-ps.id/id).
+
+### LetsCode
+- Platform to learn code for kids.
+  - Tech Stack: Codeigniter 3.
+  - My Role: Backend Developer | This platform display the information about student, teacher, modul, and landing page.
+  - URL: [https://github.com/fmuiin14/learnwithmeee](https://github.com/fmuiin14/learnwithmeee).
 ## 2020
 ### Larashop
 - Platform about book management in library, learn laravel from ebook by Azamuddin.
