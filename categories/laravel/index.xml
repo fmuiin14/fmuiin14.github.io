@@ -6,7 +6,34 @@
     <description>Recent content in laravel on FathulMuiin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Oct 2022 16:57:33 +0700</lastBuildDate><atom:link href="https://fmuiin14.github.io/categories/laravel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Oct 2022 17:28:04 +0700</lastBuildDate><atom:link href="https://fmuiin14.github.io/categories/laravel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learn Laravel 9 From Scratch - Build CRUD | #5 Edit &amp; Update Data To Database</title>
+      <link>https://fmuiin14.github.io/posts/fifth/</link>
+      <pubDate>Tue, 18 Oct 2022 17:28:04 +0700</pubDate>
+      
+      <guid>https://fmuiin14.github.io/posts/fifth/</guid>
+      <description>1 - Add Method EDIT and UPDATE 2 - Create Pages Edit 3 - Test Data </description>
+    </item>
+    
+    <item>
+      <title>Learn Laravel 9 From Scratch - Build CRUD | #4 Insert Data To Database</title>
+      <link>https://fmuiin14.github.io/posts/forth/</link>
+      <pubDate>Tue, 18 Oct 2022 17:23:50 +0700</pubDate>
+      
+      <guid>https://fmuiin14.github.io/posts/forth/</guid>
+      <description>1 - Add Method CREATE and STORE 2 - Create Pages Create 3 - Test Data </description>
+    </item>
+    
+    <item>
+      <title>Learn Laravel 9 From Scratch - Build CRUD | #3 Showing Data From Database</title>
+      <link>https://fmuiin14.github.io/posts/third/</link>
+      <pubDate>Tue, 18 Oct 2022 17:20:36 +0700</pubDate>
+      
+      <guid>https://fmuiin14.github.io/posts/third/</guid>
+      <description>1 - Create Controller Post 2 - Add Route 3 - Add View and Display Data </description>
+    </item>
+    
     <item>
       <title>Learn Laravel 9 From Scratch - Build CRUD | #2 Config Project, Create &amp; Operate Migration</title>
       <link>https://fmuiin14.github.io/posts/second/</link>
