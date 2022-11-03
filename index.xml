@@ -6,54 +6,15 @@
     <description>Recent content on FathulMuiin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Oct 2022 17:28:04 +0700</lastBuildDate><atom:link href="https://fmuiin14.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Oct 2022 16:52:26 +0700</lastBuildDate><atom:link href="https://fmuiin14.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Learn Laravel 9 From Scratch - Build CRUD | #5 Edit &amp; Update Data To Database</title>
-      <link>https://fmuiin14.github.io/posts/fifth/</link>
-      <pubDate>Tue, 18 Oct 2022 17:28:04 +0700</pubDate>
-      
-      <guid>https://fmuiin14.github.io/posts/fifth/</guid>
-      <description>1 - Add Method EDIT and UPDATE 2 - Create Pages Edit 3 - Test Data </description>
-    </item>
-    
-    <item>
-      <title>Learn Laravel 9 From Scratch - Build CRUD | #4 Insert Data To Database</title>
-      <link>https://fmuiin14.github.io/posts/forth/</link>
-      <pubDate>Tue, 18 Oct 2022 17:23:50 +0700</pubDate>
-      
-      <guid>https://fmuiin14.github.io/posts/forth/</guid>
-      <description>1 - Add Method CREATE and STORE 2 - Create Pages Create 3 - Test Data </description>
-    </item>
-    
-    <item>
-      <title>Learn Laravel 9 From Scratch - Build CRUD | #3 Showing Data From Database</title>
-      <link>https://fmuiin14.github.io/posts/third/</link>
-      <pubDate>Tue, 18 Oct 2022 17:20:36 +0700</pubDate>
-      
-      <guid>https://fmuiin14.github.io/posts/third/</guid>
-      <description>1 - Create Controller Post 2 - Add Route 3 - Add View and Display Data </description>
-    </item>
-    
-    <item>
-      <title>Learn Laravel 9 From Scratch - Build CRUD | #2 Config Project, Create &amp; Operate Migration</title>
-      <link>https://fmuiin14.github.io/posts/second/</link>
-      <pubDate>Tue, 11 Oct 2022 16:57:33 +0700</pubDate>
-      
-      <guid>https://fmuiin14.github.io/posts/second/</guid>
-      <description>In this article, we will learn how to create &amp;amp; execute migration, and display data from database in Laravel 9.
-1 - Migration Migration is like a database version control. Migration will help co-workers to change or share database schema from the application.
-2 - Configure Database Connection Open the project, search file .env
-3 - Create Database 4 - Make Model and Migration 5 - Add Field Table 6 - Operate Migration 7 - Configure Mass Assigment 8 - Add Dummy Data </description>
-    </item>
-    
-    <item>
-      <title>Learn Laravel 9 From Scratch - Build CRUD | #1 How to Install Laravel 9 in Windows</title>
+      <title>Build Laravel 9 API - Build CRUD | #1 How to Install Laravel 9 in Windows</title>
       <link>https://fmuiin14.github.io/posts/first/</link>
       <pubDate>Tue, 11 Oct 2022 16:52:26 +0700</pubDate>
       
       <guid>https://fmuiin14.github.io/posts/first/</guid>
-      <description>In this article, we will learn how to install laravel 9 in easy way. In this project, we will install Laravel using Laragon, and we will learn how to make CRUD in laravel 9. We also will learn how to upload images in laravel 9, and display the images in view pages.
-1 - Install Composer 2 - Install Laragon 3 - Add PHP 8 4 - Install Laravel 9 </description>
+      <description>We will start to build API project using Laravel 9, and in this article we will learn how to install laravel 9 in easy way. In this project, we will install Laravel using Laragon. We also will learn how to upload images in API using laravel 9, and simulate the data using API. We use windows 10 to build this project.
+1 - Install Git CLI Download and install git from here: https://git-scm.</description>
     </item>
     
     <item>
