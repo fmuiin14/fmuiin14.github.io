@@ -1,7 +1,7 @@
 ---
 title: "Learn Laravel 9 From Scratch - Build CRUD | #5 Edit & Update Data To Database"
 date: 2022-10-18T17:28:04+07:00
-draft: false
+draft: true
 ShowBreadCrumbs: true
 cover:
     image: img/5.png

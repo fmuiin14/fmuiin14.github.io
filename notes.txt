@@ -1,2 +1,16 @@
 Make a new content:
 hugo new posts/name.md
+
+hugo server
+
+Generate before push to github:
+hugo
+git add .
+git commit -m "oy"
+git push -m origin main
+
+cd public
+git add .
+git commit -m "oy"
+git push -m origin pages
+
