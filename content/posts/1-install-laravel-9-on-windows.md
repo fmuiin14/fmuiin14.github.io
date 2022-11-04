@@ -31,6 +31,7 @@ Open Laragon-> Start All-> (Right Click) ->  Quick app-> project_name (my larave
 Your Laravel project will automatically installed on document root laragon.
 ![laravel9](https://raw.githubusercontent.com/fmuiin14/fmuiin14.github.io/d3fd5981d9247a017e111966c18037a1ccbd8c06/content/posts/images/5.%20install%20laravel.png)
 After finish to install project, open laravel project (laravel-api-blog) using Visual Studio Code. Open terminal, and type: php artisan serve.
-(image serve)
+![terminal](https://raw.githubusercontent.com/fmuiin14/fmuiin14.github.io/3280dd45e21c676dcbc7114c39ed5dc201a7e180/content/posts/images/6.%20serve.png)
+
 visit http://127.0.0.1:8000/, your laravel 9 installed successfully.
-(image laravel)
+![laravel](https://raw.githubusercontent.com/fmuiin14/fmuiin14.github.io/3280dd45e21c676dcbc7114c39ed5dc201a7e180/content/posts/images/7.%20laravel.png)
