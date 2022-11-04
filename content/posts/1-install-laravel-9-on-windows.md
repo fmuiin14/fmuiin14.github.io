@@ -27,6 +27,10 @@ Download and install laragon from here: https://laragon.org/. After finish to in
 Check PHP Version on your machine, make sure your PHP version >= 8. You can open your Git CLI, and type php --version. Or you can check in your laragon-> PHP-> Version.
 ![laragon](https://raw.githubusercontent.com/fmuiin14/fmuiin14.github.io/d3fd5981d9247a017e111966c18037a1ccbd8c06/content/posts/images/4.%20check%20php.png)
 ### 5 - Install Laravel 9
-Open Laragon-> Start All-> (Right Click) ->  Quick app-> project_name.
+Open Laragon-> Start All-> (Right Click) ->  Quick app-> project_name (my laravel project name: laravel-api-blog).
 Your Laravel project will automatically installed on document root laragon.
 ![laravel9](https://raw.githubusercontent.com/fmuiin14/fmuiin14.github.io/d3fd5981d9247a017e111966c18037a1ccbd8c06/content/posts/images/5.%20install%20laravel.png)
+After finish to install project, open laravel project (laravel-api-blog) using Visual Studio Code. Open terminal, and type: php artisan serve.
+(image serve)
+visit http://127.0.0.1:8000/, your laravel 9 installed successfully.
+(image laravel)
