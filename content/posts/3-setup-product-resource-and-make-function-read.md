@@ -1,10 +1,10 @@
 ---
-title: "Learn Laravel 9 From Scratch - Build CRUD | #3 Showing Data From Database"
+title: "Learn Laravel 9 API - Build CRUD | #3 Setup Product Resource and Make Function Read"
 date: 2022-10-18T17:20:36+07:00
-draft: true
+draft: false
 ShowBreadCrumbs: true
 cover:
-    image: img/3.png
+    image: img/12.png
     alt: 'This is a post image'
     caption: 'This is the caption'
     linkFullImages: true
@@ -13,6 +13,7 @@ cover:
 # tags: ["html", "css"]
 categories: ["laravel"]
 ---
-### 1 - Create Controller Post
-### 2 - Add Route
-### 3 - Add View and Display Data
+### 1 - ProductResource.php
+### 2 - ProductController.php
+### 3 - Add in route
+### 4 - Testing via Postman
