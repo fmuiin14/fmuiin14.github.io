@@ -14,3 +14,4 @@ git add .
 git commit -m "oy"
 git push -m origin pages
 
+Update gambar di static
