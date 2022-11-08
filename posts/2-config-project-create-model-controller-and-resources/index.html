@@ -120,8 +120,8 @@ products_table.php (in database/migrations)"/>
   "keywords": [
     
   ],
-  "articleBody": "In this article, we will learn how to config database, create model, migration, controller, and resources. And also explaination about that.\n1 - Create Model Open new terminal on your project (laravel-api-blog), and type:\nphp artisan make:model Product -m\nThis action will make 2 files:\napp/Models/Product.php\nIn this file, add some code:\nExplaination: protected $fillable used for input/update data, you need to register the field name for mass assigment.\nproducts_table.php (in database/migrations)\n(we will get different name, because this generate automatically. My products migration name: 2022_11_04_103523_create_products_table.php)\nExplaination: in laravel, we use migration for create \u0026 setting field in yout table.\n2 - Configure Database Connection Open the project, search file .env. Change DB_DATABASE to your database name in your local computer. (if you use laragon, you just need to setting this one. My DB_DATABASE name = laravel-api-blog).\n3 - Create Database Open your database management (such as phpmyadmin, navicat, dbeaver. I use navicat), and make new database (laravel-api-blog).\n4 - run this command on terminal: php artisan migrate (run your migrations, this command will make new table) php artisan storage:link (this command will make Symbolic Link in your project, to make link)\n5 - Make API Resource Open terminal and type:\nphp artisan make:resource ProductResource\nWe need this file to convert format from model become JSON. With this feature, we convert JSON format faster and easier.\n",
-  "wordCount" : "226",
+  "articleBody": "In this article, we will learn how to config database, create model, migration, controller, and resources. And also explaination about that.\n1 - Create Model Open new terminal on your project (laravel-api-blog), and type:\nphp artisan make:model Product -m\nThis action will make 2 files:\napp/Models/Product.php\nIn this file, add some code:\nExplaination: protected $fillable used for input/update data, you need to register the field name for mass assigment.\nproducts_table.php (in database/migrations)\n(we will get different name, because this generate automatically. My products migration name: 2022_11_04_103523_create_products_table.php)\nExplaination: in laravel, we use migration for create \u0026 setting field in yout table.\n2 - Configure Database Connection Open the project, search file .env. Change DB_DATABASE to your database name in your local computer. (if you use laragon, you just need to setting this one. My DB_DATABASE name = laravel-api-blog).\n3 - Create Database Open your database management (such as phpmyadmin, navicat, dbeaver. I use navicat), and make new database (laravel-api-blog).\n4 - run this command on terminal: php artisan migrate (run your migrations, this command will make new table) php artisan storage:link (this command will make Symbolic Link in your project, to make link)\n5 - Make API Resource Open terminal and type:\nphp artisan make:resource ProductResource\nWe need this file to convert format from model become JSON. With this feature, we convert JSON format faster and easier.\n6 - Make Controller Open terminal and type:\nphp artisan make:controller api/ProductController\nThis command will make new file name ProductController, and we will make function for create, read, update, and delete in here.\n",
+  "wordCount" : "259",
   "inLanguage": "en",
   "image":"https://fmuiin14.github.io/img/11.png","datePublished": "2022-10-11T16:57:33+07:00",
   "dateModified": "2022-10-11T16:57:33+07:00",
@@ -262,6 +262,10 @@ products_table.php (in database/migrations)"/>
 <p>Open terminal and type:</p>
 <p><code>php artisan make:resource ProductResource</code></p>
 <p>We need this file to convert format from model become JSON. With this feature, we convert JSON format faster and easier.</p>
+<h3 id="6---make-controller">6 - Make Controller<a hidden class="anchor" aria-hidden="true" href="#6---make-controller">#</a></h3>
+<p>Open terminal and type:</p>
+<p><code>php artisan make:controller api/ProductController</code></p>
+<p>This command will make new file name ProductController, and we will make function for create, read, update, and delete in here.</p>
 
 
   </div>
