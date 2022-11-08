@@ -50,3 +50,10 @@ Open terminal and type:
 `php artisan make:resource ProductResource`
 
 We need this file to convert format from model become JSON. With this feature, we convert JSON format faster and easier.
+
+### 6 - Make Controller
+Open terminal and type: 
+
+`php artisan make:controller api/ProductController`
+
+This command will make new file name ProductController, and we will make function for create, read, update, and delete in here.
