@@ -19,8 +19,8 @@ php artisan make:model Product -m
 This action will make 2 files:
 app/Models/Product.php
 In this file, add some code:
-(gambar 2-1)
-Explaination: protected $fillable used for input/update data, you need to register the field name for mass assigment.</description>
+Explaination: protected $fillable used for input/update data, you need to register the field name for mass assigment.
+products_table.php (in database/migrations)</description>
     </item>
     
     <item>
