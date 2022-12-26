@@ -1,7 +1,7 @@
 ---
 title: "Learn Laravel 9 API - Build CRUD | #2 Config Project, Create Model, Controller, and Resources"
 date: 2022-10-11T16:57:33+07:00
-draft: false
+draft: true
 ShowBreadCrumbs: true
 cover:
     image: img/11.png

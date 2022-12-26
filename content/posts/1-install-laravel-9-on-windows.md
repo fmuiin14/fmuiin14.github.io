@@ -1,7 +1,7 @@
 ---
 title: "Learn Laravel 9 API - Build CRUD | #1 How to Install Laravel 9 in Windows"
 date: 2022-10-11T16:52:26+07:00
-draft: false
+draft: true
 ShowBreadCrumbs: true
 cover:
     image: img/10.png
