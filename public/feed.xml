@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fathul Muiin - Blog</title>
+    <link>https://fmuiin.github.io/blog</link>
+    <description>Building scalable software that solves real-world business problems.</description>
+    <language>en</language>
+    <lastBuildDate>Mon, 27 Jul 2026 07:34:39 GMT</lastBuildDate>
+    <atom:link href="https://fmuiin.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Building Scalable APIs with Laravel</title>
+      <link>https://fmuiin.github.io/blog/building-scalable-apis-with-laravel</link>
+      <guid>https://fmuiin.github.io/blog/building-scalable-apis-with-laravel</guid>
+      <description>A practical guide to designing and implementing REST APIs that can handle millions of requests with Laravel.</description>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>AI Integration Patterns for Web Applications</title>
+      <link>https://fmuiin.github.io/blog/ai-integration-patterns</link>
+      <guid>https://fmuiin.github.io/blog/ai-integration-patterns</guid>
+      <description>Exploring practical patterns for integrating AI capabilities into existing web applications without over-engineering.</description>
+      <pubDate>Tue, 02 Jan 2024 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Docker Development Workflow for PHP Developers</title>
+      <link>https://fmuiin.github.io/blog/docker-development-workflow</link>
+      <guid>https://fmuiin.github.io/blog/docker-development-workflow</guid>
+      <description>How to set up a productive Docker-based development environment for PHP and Laravel projects.</description>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

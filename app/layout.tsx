@@ -43,6 +43,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
+  },
 };
 
 export default function RootLayout({
@@ -50,16 +55,35 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: siteConfig.name,
+    url: siteConfig.url,
+    jobTitle: "Full Stack Software Engineer",
+    sameAs: [siteConfig.github, siteConfig.linkedin],
+    description: siteConfig.description,
+  };
+
   return (
     <html
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable} dark`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-screen bg-background text-text antialiased">
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
         <ScrollProgress />
         <CommandPalette />
         <Navbar />
-        <div className="pt-16">{children}</div>
+        <div id="main-content" className="pt-16">{children}</div>
         <Footer />
       </body>
     </html>
