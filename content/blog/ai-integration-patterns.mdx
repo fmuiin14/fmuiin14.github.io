@@ -1,0 +1,85 @@
+---
+title: "AI Integration Patterns for Web Applications"
+excerpt: "Exploring practical patterns for integrating AI capabilities into existing web applications without over-engineering."
+date: "2024-01-02"
+tags: ["AI", "Architecture", "Laravel"]
+---
+
+## Why AI Integration Matters
+
+AI is no longer a buzzword — it's a practical tool that can dramatically improve user experiences and business operations. But integrating AI into existing applications requires careful architecture decisions.
+
+## Pattern 1: AI as a Service
+
+The simplest pattern is treating AI as an external service:
+
+```typescript
+class AIService {
+  async summarize(text: string): Promise<string> {
+    const response = await openai.chat.completions.create({
+      model: "gpt-4",
+      messages: [
+        { role: "system", content: "Summarize the following text concisely." },
+        { role: "user", content: text },
+      ],
+    });
+
+    return response.choices[0].message.content ?? "";
+  }
+}
+```
+
+## Pattern 2: Queue-Based Processing
+
+For non-real-time AI tasks, use background processing:
+
+```php
+class ProcessDocumentJob implements ShouldQueue
+{
+    public function handle(AIService $ai): void
+    {
+        $summary = $ai->summarize($this->document->content);
+        $this->document->update(['summary' => $summary]);
+    }
+}
+```
+
+## Pattern 3: Streaming Responses
+
+For chat-like interfaces, stream AI responses:
+
+```typescript
+async function* streamResponse(prompt: string) {
+  const stream = await openai.chat.completions.create({
+    model: "gpt-4",
+    messages: [{ role: "user", content: prompt }],
+    stream: true,
+  });
+
+  for await (const chunk of stream) {
+    yield chunk.choices[0]?.delta?.content ?? "";
+  }
+}
+```
+
+## Error Handling & Fallbacks
+
+AI services can fail. Always have a fallback:
+
+- Implement circuit breakers for external AI APIs
+- Cache frequently requested AI responses
+- Provide graceful degradation when AI is unavailable
+- Set reasonable timeouts for AI operations
+
+## Cost Management
+
+AI API calls cost money. Control costs by:
+
+- Caching identical requests
+- Using smaller models for simple tasks
+- Batching requests where possible
+- Setting per-user rate limits
+
+## Conclusion
+
+Start with the simplest pattern that solves your problem. You can always add complexity later. The key is making AI integration transparent and resilient.

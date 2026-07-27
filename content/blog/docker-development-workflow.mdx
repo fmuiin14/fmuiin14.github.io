@@ -1,0 +1,126 @@
+---
+title: "Docker Development Workflow for PHP Developers"
+excerpt: "How to set up a productive Docker-based development environment for PHP and Laravel projects."
+date: "2023-12-20"
+tags: ["Docker", "PHP", "DevOps"]
+---
+
+## Why Docker for Development
+
+Docker solves the "works on my machine" problem. Every developer gets the same environment, regardless of their operating system.
+
+## Basic Setup
+
+Here's a minimal `docker-compose.yml` for Laravel:
+
+```yaml
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+      - redis
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: app
+      MYSQL_ROOT_PASSWORD: secret
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  mysql_data:
+```
+
+## The Dockerfile
+
+Keep your Dockerfile optimized for development:
+
+```dockerfile
+FROM php:8.3-fpm
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git curl zip unzip libpq-dev \
+    && docker-php-ext-install pdo pdo_mysql \
+    && pecl install redis \
+    && docker-php-ext-enable redis
+
+# Install Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+WORKDIR /var/www/html
+
+# Install dependencies first (cache layer)
+COPY composer.json composer.lock ./
+RUN composer install --no-scripts
+
+COPY . .
+
+CMD ["php", "artisan", "serve", "--host=0.0.0.0"]
+```
+
+## Makefile for Common Tasks
+
+I use a Makefile to simplify Docker commands:
+
+```makefile
+up:
+	docker compose up -d
+
+down:
+	docker compose down
+
+shell:
+	docker compose exec app bash
+
+migrate:
+	docker compose exec app php artisan migrate
+
+test:
+	docker compose exec app php artisan test
+
+fresh:
+	docker compose exec app php artisan migrate:fresh --seed
+```
+
+## Performance Tips
+
+Docker on macOS can be slow. Here's how to improve it:
+
+- Use volume mounts wisely — exclude `vendor` and `node_modules`
+- Enable Docker's VirtioFS file sharing
+- Use `.dockerignore` to reduce build context
+
+## Hot Reloading
+
+For frontend development inside Docker:
+
+```yaml
+  node:
+    image: node:20-alpine
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "5173:5173"
+    command: npm run dev -- --host
+```
+
+## Conclusion
+
+Docker adds a small overhead to setup, but the consistency and reproducibility it provides are worth it. Once configured, your entire team works in identical environments, and onboarding new developers becomes trivial.
