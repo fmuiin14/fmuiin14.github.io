@@ -6,6 +6,7 @@ import { PageWrapper } from "@/components/layout/PageWrapper";
 import { MdxContent } from "@/components/shared/MdxContent";
 import { TableOfContents } from "@/components/shared/TableOfContents";
 import { BlogNavigation } from "@/components/shared/BlogNavigation";
+import { ReadingProgress } from "@/components/shared/ReadingProgress";
 import { getAllPosts, getAllPostSlugs, getPostBySlug } from "@/lib/mdx";
 import { formatDate } from "@/lib/utils";
 
@@ -52,6 +53,7 @@ export default async function BlogPostPage({
 
   return (
     <PageWrapper className="px-6 py-20">
+      <ReadingProgress />
       <div className="mx-auto max-w-4xl">
         {/* Back link */}
         <Link
