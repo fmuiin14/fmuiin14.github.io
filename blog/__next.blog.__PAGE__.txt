@@ -1,0 +1,281 @@
+1:"$Sreact.fragment"
+2:I[94624,["/_next/static/chunks/1sqpiq8i94915.js","/_next/static/chunks/09nloucct-3f7.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/3g4ej5yhmuguo.js","/_next/static/chunks/26vdtj2za10dn.js","/_next/static/chunks/2x1jrfxf72uc8.js"],"PageWrapper"]
+3:I[41181,["/_next/static/chunks/1sqpiq8i94915.js","/_next/static/chunks/09nloucct-3f7.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/3g4ej5yhmuguo.js","/_next/static/chunks/26vdtj2za10dn.js","/_next/static/chunks/2x1jrfxf72uc8.js"],"BlogList"]
+9:I[97367,["/_next/static/chunks/1sqpiq8i94915.js","/_next/static/chunks/09nloucct-3f7.js","/_next/static/chunks/14mrh2-p_w84d.js","/_next/static/chunks/3g4ej5yhmuguo.js","/_next/static/chunks/26vdtj2za10dn.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+4:T85c,
+## Introduction
+
+Building APIs that can scale is one of the most common challenges in backend development. In this article, I'll share practical patterns I've used to build Laravel APIs that handle millions of requests daily.
+
+## API Design Principles
+
+When designing scalable APIs, there are several principles to keep in mind:
+
+1. **Consistent response format** — always return structured responses
+2. **Pagination by default** — never return unbounded collections
+3. **Proper HTTP status codes** — be explicit about what happened
+4. **Versioning** — plan for change from day one
+
+## Request Handling
+
+Here's how I structure my API controllers:
+
+```php
+class UserController extends Controller
+{
+    public function index(Request $request)
+    {
+        $users = User::query()
+            ->filter($request->only(['role', 'status']))
+            ->paginate($request->input('per_page', 15));
+
+        return UserResource::collection($users);
+    }
+
+    public function show(User $user)
+    {
+        return new UserResource($user->load(['profile', 'roles']));
+    }
+}
+```
+
+## Caching Strategy
+
+For high-traffic endpoints, I use a layered caching approach:
+
+```php
+// Cache at the application level
+$users = Cache::tags(['users'])->remember(
+    "users:page:{$page}",
+    now()->addMinutes(5),
+    fn() => User::paginate(15)
+);
+```
+
+## Rate Limiting
+
+Laravel's built-in rate limiting is powerful:
+
+```php
+RateLimiter::for('api', function (Request $request) {
+    return Limit::perMinute(60)
+        ->by($request->user()?->id ?: $request->ip());
+});
+```
+
+## Database Optimization
+
+Key techniques for database performance:
+
+- **Indexing** — analyze your queries and add appropriate indexes
+- **Eager loading** — prevent N+1 queries with `with()`
+- **Query scopes** — encapsulate common query patterns
+- **Read replicas** — distribute read traffic across replicas
+
+## Conclusion
+
+Building scalable APIs is a combination of good design, proper caching, and database optimization. Start simple, measure performance, and optimize where needed. Don't over-engineer early — let the traffic patterns guide your scaling decisions.
+5:T831,
+## Why AI Integration Matters
+
+AI is no longer a buzzword — it's a practical tool that can dramatically improve user experiences and business operations. But integrating AI into existing applications requires careful architecture decisions.
+
+## Pattern 1: AI as a Service
+
+The simplest pattern is treating AI as an external service:
+
+```typescript
+class AIService {
+  async summarize(text: string): Promise<string> {
+    const response = await openai.chat.completions.create({
+      model: "gpt-4",
+      messages: [
+        { role: "system", content: "Summarize the following text concisely." },
+        { role: "user", content: text },
+      ],
+    });
+
+    return response.choices[0].message.content ?? "";
+  }
+}
+```
+
+## Pattern 2: Queue-Based Processing
+
+For non-real-time AI tasks, use background processing:
+
+```php
+class ProcessDocumentJob implements ShouldQueue
+{
+    public function handle(AIService $ai): void
+    {
+        $summary = $ai->summarize($this->document->content);
+        $this->document->update(['summary' => $summary]);
+    }
+}
+```
+
+## Pattern 3: Streaming Responses
+
+For chat-like interfaces, stream AI responses:
+
+```typescript
+async function* streamResponse(prompt: string) {
+  const stream = await openai.chat.completions.create({
+    model: "gpt-4",
+    messages: [{ role: "user", content: prompt }],
+    stream: true,
+  });
+
+  for await (const chunk of stream) {
+    yield chunk.choices[0]?.delta?.content ?? "";
+  }
+}
+```
+
+## Error Handling & Fallbacks
+
+AI services can fail. Always have a fallback:
+
+- Implement circuit breakers for external AI APIs
+- Cache frequently requested AI responses
+- Provide graceful degradation when AI is unavailable
+- Set reasonable timeouts for AI operations
+
+## Cost Management
+
+AI API calls cost money. Control costs by:
+
+- Caching identical requests
+- Using smaller models for simple tasks
+- Batching requests where possible
+- Setting per-user rate limits
+
+## Conclusion
+
+Start with the simplest pattern that solves your problem. You can always add complexity later. The key is making AI integration transparent and resilient.
+6:T930,
+## Why Docker for Development
+
+Docker solves the "works on my machine" problem. Every developer gets the same environment, regardless of their operating system.
+
+## Basic Setup
+
+Here's a minimal `docker-compose.yml` for Laravel:
+
+```yaml
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+      - redis
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: app
+      MYSQL_ROOT_PASSWORD: secret
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  mysql_data:
+```
+
+## The Dockerfile
+
+Keep your Dockerfile optimized for development:
+
+```dockerfile
+FROM php:8.3-fpm
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git curl zip unzip libpq-dev \
+    && docker-php-ext-install pdo pdo_mysql \
+    && pecl install redis \
+    && docker-php-ext-enable redis
+
+# Install Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+WORKDIR /var/www/html
+
+# Install dependencies first (cache layer)
+COPY composer.json composer.lock ./
+RUN composer install --no-scripts
+
+COPY . .
+
+CMD ["php", "artisan", "serve", "--host=0.0.0.0"]
+```
+
+## Makefile for Common Tasks
+
+I use a Makefile to simplify Docker commands:
+
+```makefile
+up:
+	docker compose up -d
+
+down:
+	docker compose down
+
+shell:
+	docker compose exec app bash
+
+migrate:
+	docker compose exec app php artisan migrate
+
+test:
+	docker compose exec app php artisan test
+
+fresh:
+	docker compose exec app php artisan migrate:fresh --seed
+```
+
+## Performance Tips
+
+Docker on macOS can be slow. Here's how to improve it:
+
+- Use volume mounts wisely — exclude `vendor` and `node_modules`
+- Enable Docker's VirtioFS file sharing
+- Use `.dockerignore` to reduce build context
+
+## Hot Reloading
+
+For frontend development inside Docker:
+
+```yaml
+  node:
+    image: node:20-alpine
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "5173:5173"
+    command: npm run dev -- --host
+```
+
+## Conclusion
+
+Docker adds a small overhead to setup, but the consistency and reproducibility it provides are worth it. Once configured, your entire team works in identical environments, and onboarding new developers becomes trivial.
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"className":"px-6 py-20","children":["$","div",null,{"className":"mx-auto max-w-4xl","children":[["$","div",null,{"className":"mb-12","children":[["$","h2",null,{"className":"text-3xl font-bold text-text","children":"Blog"}],["$","p",null,{"className":"mt-3 text-lg text-text-muted","children":"Thoughts on software engineering, architecture, and technology"}]]}],["$","$L3",null,{"posts":[{"slug":"building-scalable-apis-with-laravel","title":"Building Scalable APIs with Laravel","excerpt":"A practical guide to designing and implementing REST APIs that can handle millions of requests with Laravel.","date":"2024-01-15","tags":["Laravel","API","Architecture"],"readingTime":"2 min read","content":"$4"},{"slug":"ai-integration-patterns","title":"AI Integration Patterns for Web Applications","excerpt":"Exploring practical patterns for integrating AI capabilities into existing web applications without over-engineering.","date":"2024-01-02","tags":["AI","Architecture","Laravel"],"readingTime":"2 min read","content":"$5"},{"slug":"docker-development-workflow","title":"Docker Development Workflow for PHP Developers","excerpt":"How to set up a productive Docker-based development environment for PHP and Laravel projects.","date":"2023-12-20","tags":["Docker","PHP","DevOps"],"readingTime":"2 min read","content":"$6"}],"tags":["AI","API","Architecture","DevOps","Docker","Laravel","PHP"]}]]}]}],["$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"EJHZSBe-KkfMBfyI2h0SW"}
+7:["$","script","script-0",{"src":"/_next/static/chunks/2x1jrfxf72uc8.js","async":true}]
+8:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
+b:null
