@@ -5,7 +5,7 @@ export const siteConfig = {
   title: "Fathul Muiin - Full Stack Software Engineer",
   description:
     "Building scalable software that solves real-world business problems. Full Stack Software Engineer specializing in Laravel, Cloud, and AI-powered applications.",
-  url: "https://fmuiin.github.io",
+  url: "https://fmuiin14.github.io",
   github: "https://github.com/fmuiin",
   linkedin: "https://linkedin.com/in/fmuiin",
   email: "fathulmuiin@gmail.com",

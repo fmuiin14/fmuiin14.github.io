@@ -7,7 +7,7 @@ const PUBLIC_DIR = path.join(process.cwd(), "public");
 
 const siteConfig = {
   name: "Fathul Muiin",
-  url: "https://fmuiin.github.io",
+  url: "https://fmuiin14.github.io",
   description:
     "Building scalable software that solves real-world business problems.",
 };
