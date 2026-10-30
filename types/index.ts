@@ -95,3 +95,70 @@ export interface GitHubStats {
   totalForks: number;
   followers: number;
 }
+
+export type InvoiceLanguage = "id" | "en";
+
+export type InvoiceStatus = "draft" | "unpaid" | "partial" | "paid";
+
+export interface BankAccount {
+  id: string;
+  bank: string;
+  accountNumber: string;
+  accountName: string;
+}
+
+export interface InvoiceSettings {
+  businessName: string;
+  businessTagline: string;
+  email: string;
+  phone: string;
+  website: string;
+  address: string;
+  logo: string;
+  bankAccounts: BankAccount[];
+  paymentInstructions: string;
+  currency: string;
+  language: InvoiceLanguage;
+  numberPrefix: string;
+  nextNumber: number;
+  dueDays: number;
+  taxLabel: string;
+  taxRate: number;
+  accentColor: string;
+  defaultNotes: string;
+  defaultTerms: string;
+  showSignature: boolean;
+}
+
+export interface InvoiceItem {
+  id: string;
+  description: string;
+  detail: string;
+  quantity: number;
+  unit: string;
+  price: number;
+}
+
+export interface InvoiceClient {
+  name: string;
+  company: string;
+  email: string;
+  phone: string;
+  address: string;
+}
+
+export interface Invoice {
+  number: string;
+  issueDate: string;
+  dueDate: string;
+  status: InvoiceStatus;
+  projectName: string;
+  client: InvoiceClient;
+  items: InvoiceItem[];
+  discountType: "percent" | "fixed";
+  discountValue: number;
+  applyTax: boolean;
+  amountPaid: number;
+  notes: string;
+  terms: string;
+}

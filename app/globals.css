@@ -157,3 +157,32 @@ code {
   border-color: var(--color-border);
   margin: 2rem 0;
 }
+
+/* Invoice generator: only the invoice is printed */
+.invoice-print-portal {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  body:has(> .invoice-print-portal) {
+    background: white !important;
+  }
+
+  body:has(> .invoice-print-portal) > :not(.invoice-print-portal) {
+    display: none !important;
+  }
+
+  .invoice-print-portal {
+    display: block;
+  }
+
+  .invoice-paper {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
