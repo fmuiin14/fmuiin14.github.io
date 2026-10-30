@@ -99,7 +99,6 @@ function generateSitemap() {
     { url: "/contact", priority: "0.7" },
     { url: "/uses", priority: "0.6" },
     { url: "/now", priority: "0.6" },
-    { url: "/invoice", priority: "0.3" },
   ];
 
   const urls = [
